@@ -1,0 +1,24 @@
+font=terminus 10
+
+
+#padding=10
+default-timeout=3000
+#anchor=bottom-right
+#padding=20
+
+
+
+background-color=#312D26
+text-color=#D8D4CD
+border-color=#D8D4CD
+
+[urgency=low]
+background-color=#312D26
+text-color=#E8DE97
+border-color=#D8D4CD
+
+[urgency=high]
+background-color=#312D26
+text-color=#E97656
+border-color=#D8D4CD
+
