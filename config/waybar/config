@@ -9,36 +9,37 @@
 		"disable-scroll": true,
 		"all-outputs": true,
 		"format": "{icon}",
-	 	"persistent_workspaces": {
-	 		"1": [],
-	 		"2": [],
-	 		"3": [],
-	 		"4": [],
-	 		"5": [],
-			"6": []
-	},
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []},
          	"format-icons": {
-             		"1": "",
-             		"2": "",
-             		"3": "",
-             		"4": "",
-             		"5": "龎",
-			"6": ""
+             		"1": "💻",
+             		"2": "🌐",
+             		"3": "📁",
+             		"4": "📘",
+			"5": "💭"
          }
      },
 	"custom/date": {
-    		"format": " {}",
+    		"format": "🗓 {}",
 		"interval": 3600,
-		"exec": "/home/chungking/.scripts/waybar-date.sh"
+		"exec": "/home/chungking/.scripts/waybar-date.sh",
+		"on-click": "gnome-calendar"
 	},
-
+	"custom/power": {
+		"format": "󰐥",
+		"on-click": "/home/chungking/.scripts/waybar-power.sh"
+	},
 
 	"tray": {
 		"icon-size": 14,
         	"spacing": 10},
 
 	"clock": {
-		"format": " {:%H:%M}",
+		"format": "⏰ {:%H:%M}",
         	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         	"format-alt": "{:%Y-%m-%d}"
 	},
@@ -49,24 +50,27 @@
             		"critical": 15,
         	},
         	"format": "{icon} {capacity}%",
-        	"format-charging": " {capacity}%",
+        	"format-charging": "⚡ {capacity}%",
         	"format-alt": "{time} {icon}",
-        	"format-full": " {capacity}%",
-        	"format-icons": ["", "", "", "", ""]
+        	"format-icons": ["🔋"],
+		"format-warning": "❗ {capacity}%",
+		"format-critical": "💀 {capacity}%"
 	},
-
+	"network": {
+        	"interval": 300,
+		"format-wifi": "直 {essid}",
+        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "睊",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-        	"format-muted": "",
+        	"format-muted": "🔇",
 		"on-click": "pavucontrol",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", "墳", ""]
+            "headphone": "🎧 ",
+            "default": ["🔈", "🔉", "🔊"]
         },
     }
 }

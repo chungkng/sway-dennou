@@ -1,8 +1,20 @@
+#pulseaudio, #custom-date, #battery, #cpu, #disk, #clock, #memory, #network, #window, #temperature, #tray {
+	box-shadow: 3px 3px 0 #302E29;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	margin-left: 3px;
+	padding: 0 10px;
+	background: #c4bea9;
+	border-radius: 0px;
+}
+
+
+
 * {
     border: none;
     border-radius: 0;
-    font-family: terminus;
-    font-size: 14px;
+    font-family: "Terminus", "Symbols Nerd Font";
+    font-size: 16px;
     min-height: 0;
 }
 
@@ -11,60 +23,91 @@ window#waybar {
     color: white;
 }
 
-#workspaces {
-	background-color: #302e29;
-	margin: 5px;
-	margin-left: 10px;
-	border-radius: 5px;
+.modules-left, .modules-right {
+	background: transparent;
+	margin-top: 3px;
+	border-radius: 0px;
 }
+
+.modules-left {
+	margin-left: 5px;
+}
+
+.modules-right {
+	margin-right: 5px;
+}
+
+
+
 #workspaces button {
-    padding: 0px 0px;
-    color: #E0E1DB;
+    padding: 0px 5px;
+    color: #302E29;
+    padding: 0 5px;
+    margin: 0 3px;
+    box-shadow: 3px 3px 0 #302E29;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    background: #c4bea9;
+    border-radius: 0px;
+
 }
 
 #workspaces button.focused {
-    color: #302e29;
-    background-color: #ACA386;
-    border-radius: 5px;
+    color: #302E29;
+    background-color: #B8C574;
+    box-shadow: 3px 3px 0 #302E29;
 }
 
 
 
-#custom-date, #battery, #clock, #pulseaudio, #network, #tray {
-	background-color: #302e29;
-	padding: 5px 10px;
-	margin: 5px 0px;
-}
+
 
 #custom-date {
-	color: #ABDADF;
+	color: #302E29;
 }
 
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
+}
 
 #tray {
-	border-radius: 0px 5px 5px 0px;
+	border-radius: 0px;
 	margin-right: 10px;
-	color: #EFAB98
+	color: #302E29
 }
 #clock {
-    color: #7B9ED3;
+    color: #302E29;
 }
 
 #battery {
-    color: #BBD757;
+	color: #302E29;
+}
+
+#battery.critical {
+	background-color: #e56744;
+}
+
+#battery.warning {
+	background-color: #E9DD95;
 }
 
 #battery.charging {
-    color: #9ece6a;
+	color: #302E29;
+	background-color: #B8C574;
 }
 
-#battery.warning:not(.charging) {
-    background-color: #EADE96;
-    color: #24283b;
+#network {
+	color: #EFAB98;
 }
-
 
 #pulseaudio {
-	color: #E9DD95;
-	border-radius: 5px 0px 0px 5px;
+	color: #302E29;
 }
